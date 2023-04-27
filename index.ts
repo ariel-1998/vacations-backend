@@ -13,10 +13,12 @@ const server = express();
 server.use(cors())
 server.use(json());
 server.use(fileUpload())
-server.use('/api/auth',authController);
-server.use('/api/vacations',vacationsRouter);
+server.use('/api/auth', authController);
+server.use('/api/vacations', vacationsRouter);
 server.use('/api/likes', likesRouter);
 
 server.use(errorHandler)
 
-server.listen(3001, () => console.log('listening on port 3001'))
+server.listen(process.env.PORT, () => {
+    console.log(`listening on port ${process.env.PORT}`)
+})
