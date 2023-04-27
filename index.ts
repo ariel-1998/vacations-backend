@@ -5,6 +5,8 @@ import { likesRouter } from "./6-controller/likes-controller";
 import { vacationsRouter } from "./6-controller/vacations-controller";
 import cors from 'cors';
 import fileUpload from "express-fileupload";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const server = express();
 
